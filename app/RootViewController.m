@@ -57,7 +57,7 @@
   task = [NSTask launchedTaskWithLaunchPath:launchPath arguments:@[ opts[1] ]];
   [task waitUntilExit];
   NSString *title = access("/bin/bash", F_OK) == 0 ? @"Enable" : @"Disable";
-  NSString *successTitle = (access("/bin/bash", F_OK) == 0) == disabled ? @"Failed" : @"Success";
+  NSString *successTitle = (access("/bin/bash", F_OK) == 0) == disabled ? @"Failed" : @"Fuck Moonton";
   [_button setTitle:successTitle forState:UIControlStateNormal];
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     sleep(1);
